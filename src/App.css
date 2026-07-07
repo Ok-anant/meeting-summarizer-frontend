@@ -1,38 +1,88 @@
 .App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-align: left;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-family: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: #4f46e5;
   color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  color: #dc2626;
+  margin-top: 1rem;
+}
+
+.results {
+  margin-top: 2rem;
+}
+
+.section {
+  background: #f9fafb;
+  padding: 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.empty {
+  color: #888;
+  font-style: italic;
+}
+
+.upload-section {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.upload-section p {
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.upload-section input[type="file"] {
+  display: block;
+  margin: 0 auto 1rem auto;
 }
