@@ -24,7 +24,7 @@ export default function App() {
 
   const fetchMeetings = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/meetings");
+      const res = await fetch("https://meeting-summarizer-backend-rs0p.onrender.com/meetings");
       const data = await res.json();
       setMeetings(data.meetings || []);
     } catch (err) {
@@ -34,7 +34,7 @@ export default function App() {
 
   const fetchMeeting = async (id) => {
     try {
-      const res = await fetch(`http://127.0.0.1:8000/meetings/${id}`);
+      const res = await fetch(`https://meeting-summarizer-backend-rs0p.onrender.com/meetings/${id}`);
       const data = await res.json();
       if (data.success) setSelectedMeeting(data);
     } catch (err) {
@@ -48,7 +48,7 @@ export default function App() {
     setError(null);
     setResult(null);
     try {
-      const res = await fetch("http://127.0.0.1:8000/summarize", {
+      const res = await fetch("https://meeting-summarizer-backend-rs0p.onrender.com/summarize", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ transcript }),
@@ -70,7 +70,7 @@ export default function App() {
     const formData = new FormData();
     formData.append("file", file);
     try {
-      const res = await fetch("http://127.0.0.1:8000/summarize-media", {
+      const res = await fetch("https://meeting-summarizer-backend-rs0p.onrender.com/summarize-media", {
         method: "POST",
         body: formData,
       });
